@@ -1,0 +1,24 @@
+{
+  "name": "goithomework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsimbal/GoItHomework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsimbal/GoItHomework/issues"
+  },
+  "homepage": "https://github.com/tsimbal/GoItHomework#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
