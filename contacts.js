@@ -1,11 +1,11 @@
-const fs = require("fs/promises");
-const path = require("path");
-const { nanoid } = require("nanoid");
+const fs = require('fs/promises');
+const path = require('path');
+const { nanoid } = require('nanoid');
 
-const contactsPath = path.join(__dirname, "db", "contacts.json");
+const contactsPath = path.join(__dirname, 'db', 'contacts.json');
 
 const listContacts = async () => {
-  const result = await fs.readFile(contactsPath, "utf8");
+  const result = await fs.readFile(contactsPath, 'utf8');
 
   if (!result) return null;
 
@@ -46,16 +46,7 @@ const addContact = async (data) => {
 const updateList = async (data) => {
   const stringifyData = JSON.stringify(data, null, 2);
 
-  // return await fs.writeFile(contactsPath, stringifyData);
-
-  await fs.writeFile(contactsPath, stringifyData, 'utf8', function (err) {
-    if (err) {
-      console.log("An error occured while writing JSON Object to File.");
-      return console.log(err);
-    }
-
-    console.log("JSON file has been saved.");
-  });
+  return await fs.writeFile(contactsPath, stringifyData);
 };
 
 module.exports = {
